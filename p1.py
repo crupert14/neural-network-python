@@ -1,9 +1,7 @@
-def testing():
-    print("testing")
-    print("Beginning")
-    print("permissions issues")
-    print("New token")
-    print("once more")
-    print("Once again")
+import sys
+import numpy as np
+import matplotlib
 
-testing()
+print("Python Version:", sys.version)
+print("Numpy Version:", np.__version__)
+print("Matplotlib Version:", matplotlib.__version__)
