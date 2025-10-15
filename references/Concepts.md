@@ -39,7 +39,7 @@ For example:
 >> - List of lists of lists in python
 >> - 3 dimensional array in numpy
 
-# Dot Product
+## Dot Product
 Computed by multiplying the values of different array indices, and then adding them together. Weights are passed first when calculating **Dot Product** because data should be indexed by weight sets.
 
 ### Examples:
