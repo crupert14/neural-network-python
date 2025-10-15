@@ -40,3 +40,24 @@ For example:
 >> - 3 dimensional array in numpy
 
 # Dot Product
+Computed by multiplying the values of different array indices, and then adding them together. Weights are passed first when calculating **Dot Product** because data should be indexed by weight sets.
+
+### Examples:
+
+Python:
+> Given:
+> ```python
+> a = [1, 2, 3]
+> b = [2, 3, 4]
+> dot_product = a[0]*b[0] + a[1]*b[1] + a[2]*b[2]
+> ```
+> Output is 20
+
+Plain text:
+> $\vec{a} = [1,2,3]$ <br>
+> $\vec{b} = [2,3,4]$ <br>
+>
+> $\vec{a} * \vec{b} = Dot Product$ <br>
+> $[1,2,3] * [2,3,4] = Dot Product$ <br>
+> $1*2 + 2*3 + 3*4 = Dot Product$ <br>
+> $20 = Dot Product$

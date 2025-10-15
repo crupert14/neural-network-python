@@ -1,4 +1,4 @@
-# 3 neurons taking 4 inputs each
+# 3 neurons taking 4 inputs each with loop
 
 inputs = [1, 2, 3, 2.5]
 
