@@ -3,6 +3,8 @@
 ## `inputs[]`
 Data given to a neuron — a neuron can take **any number of inputs**.
 
+> Common nomenclature for input sets is having them denoted by `X`
+
 These inputs can come from:
 - External data sources  
 **or**

@@ -40,9 +40,11 @@ For example:
 >> - 3 dimensional array in numpy
 
 ## Dot Product
-Computed by multiplying the values of different array indices, and then adding them together. Weights are passed first when calculating **Dot Product** because data should be indexed by weight sets.
+Computed by multiplying the values of different array indices, and then adding them together. Weights are passed first when calculating **Dot Product** given a single sample of inputs because data should be indexed by weight sets. Weight is passed second and transposed when given a batch of inputs because otherwise the inner dimensions do not match.
 
-### Examples:
+> The second dimension of the first matrix must equal the first dimension of the second matrix.
+
+### Examples with single samples of inputs:
 
 Python:
 > Given:
@@ -61,3 +63,9 @@ Plain text:
 > $[1,2,3] * [2,3,4] = Dot Product$ <br>
 > $1*2 + 2*3 + 3*4 = Dot Product$ <br>
 > $20 = Dot Product$
+
+## Batches
+The number of training samples processed before the models parameters are updated. Should be 32, 64 or in rare cases 128, in most cases 32 is the most utilized batch size.
+
+## Transposing
+Convert rows to columns in a matrix. This is done for the purpose of calculating **Dot Product** when given batches of inputs, rather than a single list.

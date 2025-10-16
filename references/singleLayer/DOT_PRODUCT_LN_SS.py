@@ -1,4 +1,4 @@
-# Dot product with layer of neurons
+# Dot product with layer of neurons and a single sample of inputs
 
 import numpy as np
 
