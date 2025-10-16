@@ -13,7 +13,7 @@ These inputs can come from:
 Input data cannot be changed directly, they are provided or produced. Inputs can only be changed by altering `weights[]` or `bias`
 
 ## `weights[]`
-Each input is associated with a **weight** (1:1 mapping). Weight changes the magnitude of an input
+Each input is associated with a **weight** (1:1 mapping). Weight changes the magnitude of an input. Weights are typically initialized to a value between -1 and 1
 
 > Every input has its own unique **weight**.
 
@@ -21,7 +21,7 @@ The neuron’s first step is to compute a **weighted sum** of all inputs, then a
 
 
 ## `bias`
-Bias is a **singular constant** associated with a neuron. Bias offsets the final output value
+Bias is a **singular constant** associated with a neuron. Bias offsets the final output value. Typically initialized as 0
 
 > Every neuron has its own unique **bias**.
 

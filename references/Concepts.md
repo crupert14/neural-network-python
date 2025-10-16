@@ -69,3 +69,48 @@ The number of training samples processed before the models parameters are update
 
 ## Transposing
 Convert rows to columns in a matrix. This is done for the purpose of calculating **Dot Product** when given batches of inputs, rather than a single list.
+
+## Fully Connected Layer Example
+
+The following is a basic example of a fully connected layer
+
+```python
+import numpy as np
+# Used for consistent values in testing
+np.random.seed(0)
+
+class Layer_Dense:
+    def __init__(self, n_inputs, n_neurons):
+        self.weights = 0.10 * np.random.randn(n_inputs, n_neurons)
+        self.biases = np.zeros((1, n_neurons))
+    def forward(self, inputs):
+        self.output = np.dot(inputs, self.weights) + self.biases
+```
+
+### Breakdown ---
+1. `__init__` <br>
+    1. `np.random.randn(n_inputs, n_neurons)`
+        - Creates a matrix of random values normally distributed with a mean of 0 and std of 1. This produces a shape of `(n_inputs, n_neurons)` - each **row** corresponds to an input feature and each **column** corresponds to a neuron
+    2. `0.10 * ...`
+        - Scales down weight values to prevent large numbers at the start of training
+    3. `np.zeros((1, n_neurons))`
+        - Each neuron has one `bias`
+        - The `(1, n_neurons)` shape means one row and one bias per neuron
+        - Initially set to 0
+2. `forward` <br>
+    1. Function where the layer computes output given some inputs
+
+## Hidden Layers
+All layers in between the input and output layers. These are referred to as **hidden layers** because you do not directly interact with or necessarily see the input or output.
+
+## ReLU (Rectified Linear Unit)
+One of the most common activation functions used in neural networks. Introduces non-linearity into a network, allowing for learning of complex patterns.
+
+Characterized by being:
+- Simple and fast
+- Allow for complex function learning by a network
+- Less prone to vanishing gradients
+
+With `X` representing input:
+> If `X > 0`, `output = X`<br>
+> If `X <= 0`, `output = 0`
